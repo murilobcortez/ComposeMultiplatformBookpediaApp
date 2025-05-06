@@ -35,9 +35,9 @@ import cmp_bookpedia.composeapp.generated.resources.book_detail_screen_rating
 import cmp_bookpedia.composeapp.generated.resources.book_detail_screen_synopsis
 import com.plcoding.bookpedia.book.presentation.book_detail.components.BlurredImageBackground
 import com.plcoding.bookpedia.book.presentation.book_detail.components.BookChip
+import com.plcoding.bookpedia.book.presentation.book_detail.components.ChipSize
 import com.plcoding.bookpedia.book.presentation.book_detail.components.TitledContent
 import com.plcoding.bookpedia.core.presentation.SandYellow
-import kotlinx.coroutines.flow.Flow
 import org.jetbrains.compose.resources.stringResource
 import kotlin.math.round
 
@@ -140,7 +140,10 @@ private fun BookDetailScreen(
                                 .wrapContentSize(Alignment.Center)
                         ){
                             state.book.languages.forEach { language ->
-                                BookChip {
+                                BookChip(
+                                    size = ChipSize.SMALL,
+                                    modifier = Modifier.padding(2.dp)
+                                ) {
                                     Text(
                                         text = language.uppercase(),
                                         style = MaterialTheme.typography.bodyMedium
@@ -162,14 +165,7 @@ private fun BookDetailScreen(
                         )
                 )
                 if(state.isLoading){
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .weight(1f),
-                        contentAlignment = Alignment.Center
-                    ){
-                        CircularProgressIndicator()
-                    }
+                    CircularProgressIndicator()
                 } else {
                     Text(
                         text = if(state.book.description.isNullOrBlank()){
