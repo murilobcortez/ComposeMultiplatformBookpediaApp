@@ -23,8 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import cmp_bookpedia.composeapp.generated.resources.Res
-import cmp_bookpedia.composeapp.generated.resources.book_search_bar_close_hint
-import cmp_bookpedia.composeapp.generated.resources.book_search_bar_search_hint
+import cmp_bookpedia.composeapp.generated.resources.book_list_screen_search_close_hint
+import cmp_bookpedia.composeapp.generated.resources.book_list_screen_search_hint
 import com.plcoding.bookpedia.core.presentation.DarkBlue
 import com.plcoding.bookpedia.core.presentation.DesertWhite
 import com.plcoding.bookpedia.core.presentation.SandYellow
@@ -53,7 +53,7 @@ fun BookSearchBar(
             ),
             placeholder = {
                 Text(
-                    text = stringResource(Res.string.book_search_bar_search_hint)
+                    text = stringResource(Res.string.book_list_screen_search_hint)
                 )
             },
             leadingIcon = {
@@ -84,7 +84,9 @@ fun BookSearchBar(
                     ) {
                         Icon(
                             imageVector = Icons.Default.Close,
-                            contentDescription = stringResource(Res.string.book_search_bar_close_hint),
+                            contentDescription = stringResource(
+                                Res.string.book_list_screen_search_close_hint
+                            ),
                             tint = MaterialTheme.colorScheme.onSurface
                         )
                     }

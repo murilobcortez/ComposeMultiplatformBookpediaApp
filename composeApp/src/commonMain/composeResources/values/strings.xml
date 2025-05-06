@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-    <string name="book_search_bar_search_hint">Search...</string>
-    <string name="book_search_bar_close_hint">Clear search</string>
+    //Book List Screen
+    <string name="book_list_screen_search_hint">Search...</string>
+    <string name="book_list_screen_search_close_hint">Clear search</string>
     <string name="book_list_screen_search_results">Search Results</string>
     <string name="book_list_screen_favorites">Favorites</string>
-    <string name="book_list_screen_no_search_results">Oops, there aren't any books for you r search .</string>
-    <string name="book_list_screen_no_favorite_books">You haven't saved any favorite book yet .</string>
+    <string name="book_list_screen_no_favorite_results">No favorite books yet.</string>
+    <string name="book_list_screen_no_search_results">Oops, there aren't any books for your search.</string>
+
+    //Book Detail Screen
+    <string name="book_detail_screen_book_cover">Book cover</string>
+    <string name="book_detail_screen_rating">Rating</string>
+    <string name="book_detail_screen_pages">Pages</string>
+    <string name="book_detail_screen_languages">Languages</string>
+    <string name="book_detail_screen_synopsis">Synopsis</string>
+    <string name="book_detail_screen_description_unavailable">Description not available.</string>
+    <string name="book_detail_screen_go_back">Go back</string>
+    <string name="book_detail_screen_mark_as_favorite">Mark as favorite</string>
+    <string name="book_detail_screen_remove_from_favorites">Remove from favorites</string>
+
+    // Errors
+    <string name="error_disk_full">Oops, it seems your disk is full.</string>
+    <string name="error_unknown">Oops, something went wrong.</string>
+    <string name="error_request_timeout">The request timed out.</string>
+    <string name="error_no_internet">Couldn't reach server. Please check your internet connection.</string>
+    <string name="error_too_many_requests">Your quota seems to be exceeded</string>
+    <string name="error_serialization">Couldn't parse data.</string>
 </resources>

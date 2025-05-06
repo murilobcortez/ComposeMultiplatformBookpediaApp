@@ -34,7 +34,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import cmp_bookpedia.composeapp.generated.resources.Res
 import cmp_bookpedia.composeapp.generated.resources.book_list_screen_favorites
-import cmp_bookpedia.composeapp.generated.resources.book_list_screen_no_favorite_books
+import cmp_bookpedia.composeapp.generated.resources.book_list_screen_no_favorite_results
 import cmp_bookpedia.composeapp.generated.resources.book_list_screen_no_search_results
 import cmp_bookpedia.composeapp.generated.resources.book_list_screen_search_results
 import com.plcoding.bookpedia.book.domain.model.Book
@@ -220,7 +220,7 @@ fun BookListScreen(
                                 if(state.favoriteBooks.isEmpty()){
                                     Text(
                                         text = stringResource(
-                                            Res.string.book_list_screen_no_favorite_books
+                                            Res.string.book_list_screen_no_favorite_results
                                         ),
                                         textAlign = TextAlign.Center,
                                         style = MaterialTheme.typography.headlineSmall
