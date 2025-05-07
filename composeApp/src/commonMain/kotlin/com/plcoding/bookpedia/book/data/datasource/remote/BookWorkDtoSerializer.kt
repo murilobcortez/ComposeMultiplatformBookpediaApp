@@ -1,5 +1,7 @@
-package com.plcoding.bookpedia.book.data.dto
+package com.plcoding.bookpedia.book.data.datasource.remote
 
+import com.plcoding.bookpedia.book.data.model.BookWorkDto
+import com.plcoding.bookpedia.book.data.model.DescriptionDto
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -14,12 +16,11 @@ import kotlinx.serialization.json.JsonDecoder
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 
-
-object BookWorkDtoSerializer: KSerializer<BookWorkDto>{
+object BookWorkDtoSerializer: KSerializer<BookWorkDto> {
 
     override val descriptor: SerialDescriptor = buildClassSerialDescriptor(
         BookWorkDto::class.simpleName!!
-    ){
+    ) {
         element<String?>("description")
     }
 
@@ -51,7 +52,7 @@ object BookWorkDtoSerializer: KSerializer<BookWorkDto>{
                         element.content
                     } else null
                 }
-                CompositeDecoder.DECODE_DONE -> break
+                CompositeDecoder.Companion.DECODE_DONE -> break
                 else -> throw SerializationException("Unexpected index $index")
             }
         }
